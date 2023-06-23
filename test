@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class GradeCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your test score: ");
+        int score = scanner.nextInt();
+
+        // Using if-else statements
+        if (score >= 90 && score <= 100) {
+            System.out.println("Grade: A");
+        } else if (score >= 80 && score < 90) {
+            System.out.println("Grade: B");
+        } else if (score >= 70 && score < 80) {
+            System.out.println("Grade: C");
+        } else if (score >= 60 && score < 70) {
+            System.out.println("Grade: D");
+        } else if (score >= 50 && score < 60) {
+            System.out.println("Grade: E");
+        } else if (score < 50) {
+            System.out.println("Grade: F");
+        } else {
+            System.out.println("Invalid score entered!");
+        }
+
+        // Using switch statement
+        int grade = score / 10;
+        switch (grade) {
+            case 10:
+            case 9:
+                System.out.println("Grade: A");
+                break;
+            case 8:
+                System.out.println("Grade: B");
+                break;
+            case 7:
+                System.out.println("Grade: C");
+                break;
+            case 6:
+                System.out.println("Grade: D");
+                break;
+            case 5:
+                System.out.println("Grade: E");
+                break;
+            default:
+                System.out.println("Grade: F");
+                break;
+        }
+    }
+}
